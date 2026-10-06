@@ -1,1 +1,22 @@
 /* Add CSS Styling */
+
+.blue {
+    background-color: rgb(240, 194, 201);
+    font-family: Verdana, DejaVu Sans, sans-serif;
+}
+
+#number2 {
+    color: rgb(46, 110, 248);
+    font-size: 36px;
+}
+
+.cooler {
+    font-size: 24px;
+}
+
+
+#another{
+    background-color: rgb(155, 231, 155);
+    font-size: 24px;
+    font-weight: bold;
+}
