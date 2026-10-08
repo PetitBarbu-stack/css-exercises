@@ -2,19 +2,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.para,
-.small-para {
+.para {
+  font-size: 22px;
+}
+
+.para, .small-para {
   color: hsl(0, 0%, 0%);
   font-weight: 800;
 }
+
 
 .small-para {
   font-size: 14px;
   font-weight: 800;
 }
 
-.para {
-  font-size: 22px;
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
 .confirm {
@@ -23,20 +29,21 @@ body {
   font-weight: bold;
 } 
 
-.button {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
-}
-
-div.text {
+.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
 }
+
+.text .child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
+}
+/* Le paragraphe « smaller paragraph » s’affichait en 22px au lieu de 14px, parce que .para { font-size: 22px } et .small-para { font-size: 14px } ont la même spécificité (une classe chacune), et que .para était écrit en dernier : c’est l’ordre qui décidait. */
+
+/* Le bouton « Confirm » n’était pas vert (fond et couleur de texte), parce que .confirm et .button ont la même spécificité (une classe chacun) et que .button était écrit en dernier : c’est l’ordre qui décidait. */
+
+/* Pour le petit dernier, .child et div.text avant la même prio : donc on précise 
+le sélecteur 2, ce qui permet via le descendant de le cibler précisément et dans la
+cascade c'est plus haut ça ;) */
